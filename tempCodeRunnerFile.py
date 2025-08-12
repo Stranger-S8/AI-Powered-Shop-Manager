@@ -1,0 +1,1 @@
+self.df = pd.read_csv("data/Sales Data/sales_data.csv")
