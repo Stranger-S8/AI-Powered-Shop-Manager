@@ -1,51 +1,37 @@
-# 🛍️ AI-Powered Shop Manager
+# AI-Powered Shop Manager
 
-A desktop-based **Shop Management System** built with **Tkinter/CustomTkinter** for GUI, **MySQL** for database storage, and **Machine Learning** for intelligent sales and product insights.  
+A desktop shop management system for inventory, sales, customers, billing, receipt generation, and basic sales prediction.
 
-This project empowers shop owners to manage inventory, billing, and customer records while leveraging **AI for sales forecasting and product categorization**.
+## Tech Stack
 
----
+- Python
+- Tkinter / CustomTkinter
+- MySQL (via `mysql-connector-python`)
+- Pandas
+- Matplotlib
+- scikit-learn
 
-## 🚀 Features
-- 🖥️ **Desktop App Interface** – clean GUI with CustomTkinter.  
-- 📦 **Inventory Management** – add, update, and delete products.  
-- 💳 **Billing System** – generate and record sales bills.  
-- 👥 **Customer Records** – maintain buyer details for future reference.  
-- 📊 **Sales Forecasting** – Random Forest Regressor predicts future sales trends.  
-- 🏷️ **Product Categorization** – Random Forest Classifier auto-suggests categories for new products.  
-- 🗄️ **Database Integration** – robust storage powered by MySQL.
-- 🗄️ **Output** – Generate Receipts.  
+## Getting Started
 
----
+```bash
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python run.py
+```
 
-## 🛠️ Tech Stack
-**GUI Framework:** Tkinter, CustomTkinter  
-**Database:** MySQL  
-**Machine Learning:** scikit-learn (Random Forest Regressor & Classifier)  
-**Language:** Python 3  
+## Configuration (Important)
 
----
+- Database credentials should **not** be committed to GitHub.
+- This repo reads the MySQL password from the environment variable `SHOPMANAGER_DB_PASSWORD` (see `database.py`).
 
-## ⚡ Installation & Setup
+Example (PowerShell):
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Stranger-S8/AI-Powered-Shop-Manager.git
-   cd AI-Shop-Manager
-2. **Create and activate virtual environment**
-    python -m venv venv
-    venv\Scripts\activate     # On Windows
-    source venv/bin/activate  # On Mac/Linux
-3.  **Install dependencies**
-    pip install -r requirements.txt
-    Setup MySQL Database
+```powershell
+$env:SHOPMANAGER_DB_PASSWORD = "your_password_here"
+python run.py
+```
 
-4.  **Create a new MySQL database (e.g., shop_manager)**.
+## GitHub Notes
 
-    Import the provided SQL schema from database/schema.sql.
-    Update your MySQL credentials in database/config.py.
-
-5. **Run the application**
-
-    python main.py
-
+Do not commit real customer data, credentials, API keys, private keys, receipts, database dumps, or other generated output.
