@@ -29,6 +29,8 @@ temp/
 # Archives and packaged builds
 *.rar
 *.zip
+*.mp4
+*.avi
 build/
 dist/
 *.spec
