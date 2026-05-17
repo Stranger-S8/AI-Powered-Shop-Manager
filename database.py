@@ -1,3 +1,4 @@
+import os
 import mysql.connector
 from mysql.connector import Error
 import hashlib
@@ -10,7 +11,7 @@ class Database:
             self.__mydb = mysql.connector.connect(
                 host = "localhost",
                 user = "root",
-                password = "REDACTED",
+                password = os.getenv("SHOPMANAGER_DB_PASSWORD", ""),
                 database = "shopmanager"
             )
             if self.__mydb.is_connected():
